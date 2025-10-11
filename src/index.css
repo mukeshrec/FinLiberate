@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-['Inter',_sans-serif];
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 bg-green-600 rounded-full cursor-pointer;
+  }
+
+  input[type='range']::-moz-range-thumb {
+    @apply w-5 h-5 bg-green-600 rounded-full cursor-pointer border-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
